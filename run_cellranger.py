@@ -74,7 +74,7 @@ if __name__ == "__main__":
             py_wirbelwind.edgehill.create_edgehill_configuration(
                 labels=create_label_builder('example edgehill+longbow cellranger4 tcr'),
                 run_type=EdgehillType.VDJ,
-                input_dir='gs://scaramouche_sandbox/chenling/test1/',
+                input_dir='gs://scaramouche_sandbox/chenling/test1/*',
                 cellranger_distribution=NamedCellrangerDistribution.cellranger4.value,
             ),
             # py_wirbelwind.edgehill.create_edgehill_configuration(
@@ -97,8 +97,5 @@ if __name__ == "__main__":
             # print("If we made it here, abort was successful. No boom, commander!")
 
     details = api.get_metadata(result.id)  # pylint: disable=invalid-name
-    print(f'Status {api.get_job_status(result.id)}')
-
-
-
-print(get_longbow_run_outputs(details))
+    print(f'Status {api.get_job_status(result.id)}'
+    print(get_longbow_run_outputs(details))

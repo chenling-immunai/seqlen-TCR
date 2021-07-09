@@ -75,8 +75,7 @@ if __name__ == "__main__":
                 labels=create_label_builder('example edgehill+longbow cellranger4 tcr'),
                 run_type=EdgehillType.VDJ,
                 input_dir='gs://scaramouche_sandbox/chenling/test1/',
-                expected_cell_count=5000,
-                cellranger_distribution=NamedCellrangerDistribution.cellranger3.value,
+                cellranger_distribution=NamedCellrangerDistribution.cellranger4.value,
             ),
             # py_wirbelwind.edgehill.create_edgehill_configuration(
             #     labels=create_label_builder('example edgehill+longbow atac'),

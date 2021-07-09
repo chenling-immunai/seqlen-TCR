@@ -96,5 +96,9 @@ if __name__ == "__main__":
             # api.abort(result.id)
             # print("If we made it here, abort was successful. No boom, commander!")
 
-    details = api.get_metadata("a3557b3d-9689-47d5-8f95-fc4fa9c4dd9e")  # pylint: disable=invalid-name
-    print(get_longbow_run_outputs(details))
+    details = api.get_metadata(result.id)  # pylint: disable=invalid-name
+    print(f'Status {api.get_job_status(result.id)}')
+
+
+
+print(get_longbow_run_outputs(details))
